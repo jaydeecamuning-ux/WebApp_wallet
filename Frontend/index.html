@@ -1,0 +1,105 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login/Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card" role="main">
+            <div class="logo">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <text x="50%" y="50%" font-size="48" font-family="Arial, sans-serif" font-weight="bold"
+                        text-anchor="middle" dominant-baseline="middle" fill="green">
+                        $
+                    </text>
+                </svg>
+
+                <h1>NN Wallet</h1>
+            </div>
+
+
+            <h2>Welcome back!</h2>
+            <p class="lead">To continue, first verify that it's you</p>
+
+
+            <div class="tabs" role="tablist">
+                <div class="tab active" id="tab-login" role="tab" aria-selected="true">LOGIN</div>
+                <div class="tab inactive" id="tab-register" role="tab" aria-selected="false">REGISTER</div>
+            </div>
+
+
+            <!-- Login Form -->
+            <form id="loginForm" autocomplete="on">
+                <label class="section">EMAIL</label>
+                <div class="input-row">
+                    <input class="field" id="log_email" type="email" placeholder="Enter your Email account" required />
+                </div>
+
+
+                <label class="section">PASSWORD</label>
+                <input class="field" id="key" name="key" type="password" placeholder="Enter Your Password" required
+                    style="margin-top:6px" />
+
+
+                <button type="submit" class="btn-login">LOGIN</button>
+            </form>
+
+
+            <!-- Register Form -->
+            <form id="registerForm" autocomplete="off" style="display:none">
+                <label class="section">EMAIL ACCOUNT</label>
+                <div class="input-row">
+                    <input  type="email" id="reg_email" placeholder="Enter your Email account" required/>
+                    <button class="btn" id="otp_sent">Sent OTP</button>
+                </div>
+                <div class="otpverify">
+                    <input type="number" inputmode="numeric" pattern="[0-9]" id="otp_inp" placeholder="Enter OTP" required/>
+
+                </div>
+
+
+                <label class="section">PASSWORD</label>
+                <input class="field" id="regPassword" name="regPassword" type="password" placeholder="Enter password"
+                    required style="margin-top:6px" />
+
+
+                <label class="section">RE-ENTER PASSWORD</label>
+                <input class="field" id="rePass" name="rePass" type="password" placeholder="Re-enter password" required
+                    style="margin-top:6px" />
+                <span id="error" class="error"></span>
+
+
+                <div class="checkbox">
+                    <input type="checkbox" id="showPass" />
+                    <label for="showPass">Show Password</label>
+                </div>
+
+
+                <button type="submit" class="btn-register" id="btn_register">REGISTER</button>
+            </form>
+
+
+            <p style="margin-top:14px;color:var(--muted);font-size:13px">Having trouble? <a href="#"
+                    style="color:var(--accent);text-decoration:none">Contact support</a></p>
+
+
+        </div>
+    </div>
+
+    <div style="width:100%;max-width:480px;">
+        <button
+            style="width:100%;padding:12px;border-radius:6px;background:transparent;border:2px solid rgba(255,255,255,0.03);height:44px"></button>
+    </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

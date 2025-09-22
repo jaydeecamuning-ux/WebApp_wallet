@@ -1,0 +1,214 @@
+/* styles.css */
+:root {
+  --bg: #071b2a;
+  --card: #0e2740;
+  --accent: #2e7d32;
+  --muted: #9aa9b6;
+  --input: #f3f5f7;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  font-family: Inter, system-ui, Arial;
+  margin: 0;                        /* remove default spacing */
+  height: 100vh;                    /* full viewport height */
+  background-image: url("background.jpg");  /* same folder image */
+  background-size: cover;           /* scale image to fill screen */
+  background-repeat: no-repeat;     /* don’t tile */
+  background-position: center;      /* keep centered */
+  background-attachment: fixed;     /* optional: makes it stay fixed on scroll */
+}
+
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 28px 18px;
+  color: var(--white);
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg); 
+  border-radius: 8px;
+  padding: 28px 26px 40px;
+  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.6);
+  
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px
+}
+
+.logo svg {
+  width: 48px;
+  height: 48px
+}
+
+.logo h1 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--accent)
+}
+
+h2 {
+  font-size: 28px;
+  margin: 18px 0 4px
+}
+
+p.lead {
+  margin: 0 0 18px;
+  color: var(--muted)
+}
+
+.tabs {
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.03)
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 12px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600
+}
+
+.tab.active {
+  background: var(--accent);
+  color: var(--white)
+}
+
+.tab.inactive {
+  color: var(--muted)
+}
+
+label.section {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.5px
+}
+
+.input-row {
+  display: flex;
+  gap: 12px
+}
+
+.country {
+  width: 96px;
+  display: flex;
+  align-items: center;
+  background: var(--card);
+  border-radius: 4px;
+  padding: 10px 12px
+}
+
+.field {
+  flex: 1;
+  background: var(--card);
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  
+}
+
+#otp_inp, #reg_email, #log_email{
+  flex: 1;
+  background: var(--card);
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  margin-top: 10px;
+  
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+
+.field::placeholder {
+  color: rgba(255, 255, 255, 0.35)
+}
+
+.checkbox {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted)
+}
+
+.btn-login, .btn-register {
+  margin-top: 22px;
+  background: var(--accent);
+  border: none;
+  color: var(--white);
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer
+}
+
+#otp_sent, #otp_verify{
+  margin-top: 22px;
+  background: var(--accent);
+  border: none;
+  color: var(--white);
+  width: 25%;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 100;
+  font-size: 14px;
+  cursor: pointer
+}
+
+
+.bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 18px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
+  display: flex;
+  justify-content: center
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media(min-width:600px) {
+  .wrap {
+    align-items: center
+  }
+
+  .card {
+    padding: 36px 38px
+  }
+}
